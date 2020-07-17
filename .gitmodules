@@ -42,3 +42,6 @@
 	path = tools/tblCRCTool
 	url = https://github.com/nasa/tblCRCTool.git
         branch = master
+[submodule "apps/skeleton_app"]
+	path = apps/skeleton_app
+	url = https://github.com/nasa/skeleton_app.git
