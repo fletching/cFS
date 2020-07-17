@@ -42,6 +42,7 @@
 #include "ci_lab_msgids.h"
 
 #include "sample_app_msgids.h"
+#include "skeleton_app_msgids.h"
 
 #if 0
 #include "hs_msgids.h"
@@ -60,6 +61,7 @@ TO_LAB_Subs_t TO_LAB_Subs =
         {CFE_SB_MSGID_WRAP_VALUE(TO_LAB_DATA_TYPES_MID), {0, 0}, 4},
         {CFE_SB_MSGID_WRAP_VALUE(CI_LAB_HK_TLM_MID), {0, 0}, 4},
         {CFE_SB_MSGID_WRAP_VALUE(SAMPLE_APP_HK_TLM_MID), {0, 0}, 4},
+        {CFE_SB_MSGID_WRAP_VALUE(SKELETON_APP_HK_TLM_MID), {0, 0}, 4},
 
     #if 0
         /* Add these if needed */
