@@ -1,0 +1,41 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Rebuild FSW",
+            "type": "shell",
+            "command": "rm -rf build && make SIMULATION=native ENABLE_UNIT_TEST=true prep && make && make install",
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Build FSW",
+            "type": "shell",
+            "command": "make && make install",
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Run FSW",
+            "type": "shell",
+            "command": "./core-cpu1",
+            "options": {
+                "cwd": "build/exe/cpu1"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Run Ground System",
+            "type": "shell",
+            "command": "python3 GroundSystem.py",
+            "options": {
+                "cwd": "tools/cFS-GroundSystem"
+            },
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
